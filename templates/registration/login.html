@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新乡市气象台</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Dark.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+</head>
+
+<body>
+    <div class="login-dark">
+        <form method="post">{% csrf_token %}
+            <h2 style="text-align: center">新乡市气象台</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group"><input class="form-control" type="text" name="username" placeholder="用户名" /></div>
+          {% block register %}
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="密码" /></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">登录</button></div>
+            <input type="hidden" name="next" value="{{next}}"/>
+            <span>
+              <a href="#" class="forgot pull-left">忘记密码?</a>
+              <a href="/accounts/register" class="forgot pull-right">新用户? 注册</a>
+            </span>
+          {% endblock %}
+        </form>
+    </div>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
