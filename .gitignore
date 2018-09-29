@@ -1,4 +1,8 @@
+# ÆäËû
 XXLocalPlatform/private_settings.py
+
+#pyCharm
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
