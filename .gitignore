@@ -1,8 +1,8 @@
-# 其他
-XXLocalPlatform/private_settings.py
-
 # pyCharm
-.idea/
+.idea
+
+# other
+XXLocalPlatform/private_settings.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
